@@ -9,7 +9,8 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBox x:Name="HelloMessage" Text="Hello World!" Margin="10" IsReadOnly="True"/>
+            <TextBlock x:Name="HelloMessageHeading" Margin="10" HorizontalAlignment="Center" FontSize="20" Text="Hello Message Application" />
+            <TextBox x:Name="HelloMessage" Text="...waiting for your input..." Margin="10" IsReadOnly="True"/>
             <Button x:Name="ClickIt" Content="Click it!" Margin="10" HorizontalAlignment="Center" Click="ClickIt_Click" />
         </StackPanel>
     </Grid>

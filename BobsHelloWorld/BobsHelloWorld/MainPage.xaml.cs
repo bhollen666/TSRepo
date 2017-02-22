@@ -22,13 +22,25 @@ namespace BobsHelloWorld
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        int m_currentStatus = 0;
+
         public MainPage()
         {
             this.InitializeComponent();
-        }
+        }   
         private void ClickIt_Click(object sender, RoutedEventArgs e)
         {
-            this.HelloMessage.Text = "Hello, Windows 10 IoT Core on bobwin10iot!";
+            if (m_currentStatus == 0)
+            {
+                m_currentStatus = 1;
+                this.HelloMessage.Text = "Click on!";
+            }
+            else
+            {
+                m_currentStatus = 0;
+                this.HelloMessage.Text = "Click off!";
+            }
+            
         }
     }
 }
