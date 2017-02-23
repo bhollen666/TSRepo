@@ -33,14 +33,19 @@ namespace BobsHelloWorld
             if (m_currentStatus == 0)
             {
                 m_currentStatus = 1;
-                this.HelloMessage.Text = "Click on!";
+                this.myName.Text = "Male";
             }
             else
             {
                 m_currentStatus = 0;
-                this.HelloMessage.Text = "Click off!";
+                this.myName.Text = "Female";
             }
             
+        }
+        private void ResetIt_Click(object sender, RoutedEventArgs e)
+        {
+            this.myName.Text = "";
+            this.myAddress.Text = "";
         }
     }
 }

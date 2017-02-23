@@ -7,11 +7,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock x:Name="HelloMessageHeading" Margin="10" HorizontalAlignment="Center" FontSize="20" Text="Hello Message Application" />
-            <TextBox x:Name="HelloMessage" Text="...waiting for your input..." Margin="10" IsReadOnly="True"/>
-            <Button x:Name="ClickIt" Content="Click it!" Margin="10" HorizontalAlignment="Center" Click="ClickIt_Click" />
-        </StackPanel>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Margin="10" Grid.Row="0" Text="Name:" />
+        <TextBox x:Name="myName" Margin="10" Grid.Row="0" Grid.Column="1" Text="John Doe"/>
+        <TextBlock Margin="10" Grid.Row="1" Text="Address:" />
+        <TextBox x:Name="myAddress" Margin="10" Grid.Row="1" Grid.Column="1" Text="1 Microsoft Way"/>
+        <Button x:Name="ClickIt" Content="Ok" Margin="2" Grid.Row="2" Grid.Column="1" Click="ClickIt_Click" />
+        <Button x:Name="ResetIt" Content="Reset" Margin="2" Grid.Row="3" Grid.Column="1" Click="ResetIt_Click" />
     </Grid>
+    
 </Page>
